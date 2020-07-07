@@ -122,9 +122,9 @@ namespace AriasMariano_2D_SP
                     MessageBox.Show("No hay alumnos a evaluar");
                 }
             }
-            catch (Exception ex)
+            catch (ErrorEjecucionException ex)
             {
-                throw new ErrorEjecucionException(ex.Message);
+              
             }
         }
 
@@ -190,7 +190,7 @@ namespace AriasMariano_2D_SP
                    //this.Close();
                 }
             }
-            catch (Exception)
+            catch (ErrorEjecucionException)
             {
                 //throw new ErrorEjecucionException("error");
             }

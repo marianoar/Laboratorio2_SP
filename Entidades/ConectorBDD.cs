@@ -84,7 +84,7 @@ namespace AriasMariano_2D_SP
             }
             catch(ErrorBDDException ex)
             {
-                throw new ErrorBDDException();
+
             }
             finally
             {
@@ -125,7 +125,7 @@ namespace AriasMariano_2D_SP
             }
             catch(ErrorBDDException)
             {
-                throw new ErrorBDDException();
+
             }
             finally
             {
