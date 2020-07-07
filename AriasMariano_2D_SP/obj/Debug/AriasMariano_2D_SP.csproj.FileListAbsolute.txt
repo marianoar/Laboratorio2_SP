@@ -1,0 +1,16 @@
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\AriasMariano_2D_SP.exe.config
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\AriasMariano_2D_SP.exe
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\AriasMariano_2D_SP.pdb
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.csprojAssemblyReference.cache
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.Properties.Resources.resources
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.csproj.GenerateResource.cache
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.csproj.CoreCompileInputs.cache
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.exe
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.pdb
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\Entidades.pdb
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.FrmInicio.resources
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.csproj.CopyComplete
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\obj\Debug\AriasMariano_2D_SP.FrmAulaExamen.resources
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\Excepciones.dll
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\AriasMariano_2D_SP\bin\Debug\Excepciones.pdb

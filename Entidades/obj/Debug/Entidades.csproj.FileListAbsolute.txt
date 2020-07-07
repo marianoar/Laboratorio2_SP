@@ -1,0 +1,9 @@
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\bin\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\bin\Debug\Entidades.pdb
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\obj\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\obj\Debug\Entidades.pdb
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\bin\Debug\Excepciones.dll
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\compa\Desktop\UTN\00PyL\SegundoParcial\AriasMariano_2D_SP\Entidades\obj\Debug\Entidades.csproj.CopyComplete
