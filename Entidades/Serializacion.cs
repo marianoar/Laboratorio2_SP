@@ -162,8 +162,6 @@ namespace Entidades
                 {
                     throw new FileNotFoundException("no se encontro el archivo");
                 }
-         
-
         }
     }
 }

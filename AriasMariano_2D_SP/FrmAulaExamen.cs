@@ -18,6 +18,8 @@ namespace AriasMariano_2D_SP
 
     delegate void Evaluar(object obj);
 
+    //public delegate void Sleeper(int time);
+
     public partial class FrmAulaExamen : Form
     {
         public delegate void sendLista(Queue<Alumno> alumnosA, Queue<Alumno> alumnosB);
@@ -46,6 +48,7 @@ namespace AriasMariano_2D_SP
             this.alumnos = alumnos;
             this.docentes = docentes;
             aulas = new List<Aula>();
+
             hilos = new List<Thread>();
 
             ejecutarEvaluacion = new Thread(new ParameterizedThreadStart(Llamar));
@@ -57,16 +60,19 @@ namespace AriasMariano_2D_SP
 
             EvaluarNext += Llamar;
             serializarAp += Serializacion.GuardarXML;
-
         }
 
         private void FrmAulaExamen_Load(object sender, EventArgs e)
         {
+            // armo el texto
             lblAlumno.Text = "El alumno :";
             lblTxt.Text = "está siendo evaluado por";
             lblDocente.Text = "el Docente: ";
             lblNota1.Text = "Nota 1: ";
             lblNota2.Text = "Nota 2: ";
+
+            // inicia hilo de evaluaciones
+            ejecutarEvaluacion.Start(textBoxAlumno);
         }
 
         /// <summary>
@@ -76,8 +82,7 @@ namespace AriasMariano_2D_SP
         public Alumno PrepararProximo()
         {
             textBoxProximo.Clear();
-            try
-            {
+
                 if (alumnos.Count > 0)
                 {
                     Alumno alumno = alumnos.Peek();
@@ -88,11 +93,12 @@ namespace AriasMariano_2D_SP
                 {
                     return null;
                 }
-            }catch(Exception ex)
-            {
-                throw new ErrorEjecucionException(ex.Message);
-            }
         }
+
+        /// <summary>
+        /// Llamo al metodo Hacer evaluaciones
+        /// </summary>
+        /// <param name="txtBox"></param>
         public void Llamar(object txtBox)
         {
             try
@@ -122,6 +128,12 @@ namespace AriasMariano_2D_SP
             }
         }
 
+        /// <summary>
+        /// Realiza evaluaciones, setea en el objeto Alumno , graba archivos y envia a base de datos
+        /// </summary>
+        /// <param name="a">Alumno evaluado</param>
+        /// <param name="d">Docente evaluando</param>
+        /// <param name="text">TextBox</param>
         public void HacerEvaluacion (Alumno a, Docente d, TextBox text)
         {
             try
@@ -133,11 +145,15 @@ namespace AriasMariano_2D_SP
                 // llamo a metodos de extension
                 a.SetNotaFinal(nota1, nota2);
                 a.SetAprobacion(a.NotaFinal);
-
+               
                 Mostrar(a.ToString(), d.ToString(), text);
 
                 textBoxNota1.Text = nota1.ToString();
                 textBoxNota2.Text = nota2.ToString();
+
+                //dormir();
+                //Thread.Sleep(1000);
+
                 if (a.NotaFinal < 4)
                 {
                     alumnosDesaprobados.Enqueue(a);
@@ -159,6 +175,7 @@ namespace AriasMariano_2D_SP
                         ConectorBDD.SetEvaluacionBDD(a.Id, d.Id, random.Next(1, 6), nota1, nota2, a.NotaFinal, "Alumno aprobado");
                     }
                 }
+            
                 //MessageBox.Show("alumno evaluado");
 
                 LimpiarTxtBox();
@@ -218,7 +235,11 @@ namespace AriasMariano_2D_SP
             textBoxProximo.Clear();
         }
 
-
+        /// <summary>
+        /// Recorro lista de hilos para terminarlos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAulaExamen_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (ejecutarEvaluacion.IsAlive)
@@ -237,6 +258,11 @@ namespace AriasMariano_2D_SP
             }
         }
 
+        /// <summary>
+        /// Devuelvo DialogResult.Ok al form padre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (ejecutarEvaluacion.IsAlive)

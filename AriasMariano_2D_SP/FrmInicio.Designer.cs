@@ -93,13 +93,13 @@
             // 
             // lblRecreo
             // 
-            this.lblRecreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecreo.Location = new System.Drawing.Point(337, 210);
             this.lblRecreo.Name = "lblRecreo";
             this.lblRecreo.Size = new System.Drawing.Size(200, 23);
             this.lblRecreo.TabIndex = 4;
             this.lblRecreo.Text = "label1";
-            this.lblRecreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRecreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTiempo
             // 
@@ -262,6 +262,7 @@
             // timerRecreo
             // 
             this.timerRecreo.Interval = 1000;
+            this.timerRecreo.Tick += new System.EventHandler(this.timerRecreo_Tick);
             // 
             // FrmInicio
             // 

@@ -13,6 +13,8 @@ namespace Entidades
         private string responsable;
         // int nota1, nota2;
         private int notaFinal;
+
+        //atributo agregado para usar metodos de extension
         private bool aprueba;
 
         #region Propiedades

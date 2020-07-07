@@ -7,8 +7,6 @@ using System.Xml;
 using System.Xml.Serialization;
 using Excepciones;
 
-
-
 namespace UnitTestProject
 {
     [TestClass]
@@ -50,8 +48,9 @@ namespace UnitTestProject
         [TestMethod]
         public void DeserealizarAlumnoBinario()
         {
-            Serializacion ser = new Serializacion();
-            Alumno alumno = ser.LeerBinario("nada");
+
+                Serializacion ser = new Serializacion();
+                Alumno alumno = ser.LeerBinario("nada");
         }
 
         /// <summary>
