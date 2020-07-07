@@ -11,11 +11,13 @@ namespace Excepciones
     {
         public ErrorBDDException(string message, Exception innerException) :base(message, innerException)
         {
-          
+            string txt = Txt;
+            CrearArchivoLogs.Grabar(true, txt);
         }
         public ErrorBDDException(string message):base(message)
         {
-           
+            string txt = Txt;
+            CrearArchivoLogs.Grabar(true, txt);
         }
         public ErrorBDDException() : base()
         {

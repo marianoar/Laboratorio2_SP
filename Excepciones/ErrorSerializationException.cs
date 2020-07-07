@@ -11,10 +11,14 @@ namespace Excepciones
     public class ErrorSerializationException : Exception
     {
         public ErrorSerializationException(string message, Exception innerException) : base(message, innerException) {
+            string txt = Txt;
+            CrearArchivoLogs.Grabar(true, txt);
         }
 
         public ErrorSerializationException(string message):base(message)
         {
+            string txt = Txt;
+            CrearArchivoLogs.Grabar(true, txt);
         }
 
         public ErrorSerializationException(): base()

@@ -10,9 +10,13 @@ namespace Excepciones
     {
         public ErrorEjecucionException(string message, Exception innerException) : base(message, innerException)
         {
+            string txt = Txt;
+            CrearArchivoLogs.Grabar(true, txt);
         }
         public ErrorEjecucionException(string message) :base(message)
         {
+            string txt = Txt;
+            CrearArchivoLogs.Grabar(true, txt);
         }
         public ErrorEjecucionException() : base( )
         {

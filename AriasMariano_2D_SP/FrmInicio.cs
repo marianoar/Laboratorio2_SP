@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Entidades;
 using System.Threading;
 using System.Diagnostics;
+using Excepciones;
 
 namespace AriasMariano_2D_SP
 {
@@ -58,13 +59,20 @@ namespace AriasMariano_2D_SP
 
             if (Docentes.Count == 0)
             {
-                //traigo los docentes desde el archivo XML
-                Docentes= Serializacion.Deserealizer();
+                try
+                {
+                    //traigo los docentes desde el archivo XML
+                    Docentes = Serializacion.Deserealizer();
 
-                //cargo los docentes en la BDD
-                ConectorBDD.SetDocentes(Docentes);
+                    //cargo los docentes en la BDD
+                    ConectorBDD.SetDocentes(Docentes);
 
-                Docentes = ConectorBDD.GetDocentes();
+                    Docentes = ConectorBDD.GetDocentes();
+                }
+                catch(ErrorBDDException)
+                {
+
+                }
             }
 
             RefreshListBox();
@@ -135,6 +143,7 @@ namespace AriasMariano_2D_SP
             {
                 lblRecreo.Text = mensajes[2];
                 timerRecreo.Stop();
+                lblRecreo.ForeColor = Color.BlueViolet;
                 foreach (Thread item in hilos)
                 {
                     if (item.IsAlive)

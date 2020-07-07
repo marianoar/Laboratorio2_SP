@@ -24,7 +24,7 @@ namespace Entidades
             List<Docente> docentes = new List<Docente>();
             string ruta = "\\SegundoParcialUtn\\JardinUtn\\Docentes\\Docentes.xml";
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + ruta;
-
+            
             if (File.Exists(path))
             {
                 try
@@ -43,7 +43,7 @@ namespace Entidades
             }
             else
             {
-                return docentes;
+                throw new ErrorBDDException("no se encontro archivo");
             }
         }
         /// <summary>
